@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Letter</title>
+
+  <!-- Google Font: Quicksand -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #e6f3ff; /* soft light blue */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 20px
+      position: relative;
+      color: #034a6e;
+      cursor: url('data:image/x-icon;base64,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'), auto;
+
+    }
+
+    /* subtle blurred pastel circle behind */
+    .bg-shape {
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 220px;
+      height: 220px;
+      background: #a0d4f7;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.6s ease;
+      z-index: 2;
+    }
+
+    button {
+      font-family: 'Quicksand', sans-serif;
+      background: #bdeaff;
+      border: none;
+      padding: 16px 38px;
+      border-radius: 45px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #034a6e;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(0, 90, 130, 0.15);
+      transition: transform 0.6s ease, background-color 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    button:hover {
+      background: #a8d9fb;
+      box-shadow: 0 8px 20px rgba(0, 90, 130, 0.25);
+    }
+
+    .cute-gif {
+      width: 140px;
+      height: auto;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0, 90, 130, 0.1);
+      transition: box-shadow 0.3s ease;
+      z-index: 2;
+    }
+
+    .cute-gif:hover {
+      box-shadow: 0 14px 32px rgba(0, 90, 130, 0.22);
+    }
+
+    .move-up {
+      transform: translateY(-10px);
+    }
+
+    .letter {
+      display: none;
+      max-width: 950px;
+      width: 235vw;
+      max-height: 75vh;
+      background: #f0faff;
+      border-radius: 22px;
+      box-shadow: 0 8px 28px rgba(0, 90, 130, 0.12);
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      color: #034a6e;
+      line-height: 1.7;
+      font-family: 'Quicksand', sans-serif;
+      position: relative;
+      top: -40px;
+      opacity: 0;
+      transition: all 0.7s ease;
+      text-align: left;
+      margin-top: 30px;
+      z-index: 1;
+      user-select: text;
+      overflow: hidden;
+      box-sizing: border-box;
+      margin-bottom: -20px;
+      
+    }
+
+    .letter:hover {
+      transform: scale(1.01);
+      box-shadow: 0 12px 36px rgba(0, 90, 130, 0.18);
+    }
+
+    .show-letter {
+      display: block;
+      animation: fadeSlideDown 0.7s ease forwards;
+    }
+
+    @keyframes fadeSlideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    /* Floating hearts container */
+    #floating-hearts {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh; /* match letter height */
+      pointer-events: none;
+      overflow: visible;
+      z-index: 0; /* behind letter */
+    
+    }
+
+    .floating-heart {
+      position: absolute;
+      bottom: 0;
+      font-size: 18px;
+      color: rgba(173, 216, 230, 0.5); /* soft light blue */
+      user-select: none;
+      animation-name: floatUpNoFade;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      filter: drop-shadow(0 0 1px #a0d4f7);
+      will-change: transform;
+    }
+
+    @keyframes floatUpNoFade {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.3);
+        opacity: 1;
+      }
+    }
+
+    @media (max-height: 700px) {
+  .letter {
+    font-size: 1rem;
+    padding: 20px 30px;
+    line-height: 1.5;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="bg-shape"></div>
+
+  <div id="gifButtonWrapper" class="wrapper">
+    <img
+      src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjFlNXpvMDM1aGdvNHloOXNrZjc4ZXpocHY1Nmh5amprcnp3dTR4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c76IJLufpNwSULPk77/giphy.gif"
+      alt="Cute animation"
+      class="cute-gif"
+    />
+    <button id="showLetterBtn">For you sayang 💙</button>
+  </div>
+
+  <div id="floating-hearts"></div>
+
+  <div class="letter" id="letter">
+    <p>
+      To my sayang saya Hafiz  💌,<br /><br />
+      wihiii i made it. i made a virtual love letter for u hihi. #madewithlove. 
+      thank you sayang thank you for loving me and thankyou for opening your heart to me. 
+      i appreciate every things u have done to me. 
+      every words u have spoke to me. 
+      every paragraph u have sent to me. 
+      i appreciate it so so much. 
+      day by day u healed the past me and i hope im able to do the same to u. 
+      i love it when u open up ur feelings to me , when u said u miss me gila gila , when u recite ur love to me like a poem, when u told me story abt urself i love it all. i wanna be with u when ur happy (plus point if im the one who make u happy) , when ur sad , stressed abt something, overthinking, basically every emotions ur going thru i wanna be with u, 
+      i wanna be the one u come to first when things happen #imselfish.
+       i want to have u all to myself :(( i hope u wont get tired of me, of our petty fights, of my mengada and importantly i hope u wont get tired of us. lets never stop trying ya sayang. i dont wanna lose u as i know that particularly means i lose myself as well. i love you i love you so much. i wanna shower u with love cause u deserves it. u deserves it sayang and i dont feel like its wasted even if i confess my love to u so many times cause ik someone which is u love me so so much also hehe.
+      every thing is worth it. me confessing to u and got rejected twice? i got accepted the third time and now im the happiest gurl in the world so its worth it. the pain i felt that time is nothing compared to the happiness i felt today. i have u now sayang and everytime i have the random realisation that u are really mine , i got the sudden burst of happiness. its my favourite memory of us sayang. its all worth it so ik yang us being crazy over this ldr situation is gonna be worth it at the end. our long wait is gonna end someday which is we getting married yayyy. thats the only ending ill tolerate ehe. i love you sayang and im excited to see u next month muah muah 💋<br /><br />
+      From your sarah 💖<br />
+
+    </p>
+  </div>
+
+  <script>
+    const button = document.getElementById('showLetterBtn');
+    const letter = document.getElementById('letter');
+    const heartsContainer = document.getElementById('floating-hearts');
+
+
+
+    button.addEventListener('click', () => {
+      if (letter.classList.contains('show-letter')) {
+        // Hide letter
+        letter.classList.remove('show-letter');
+        button.classList.remove('move-up');
+        button.textContent = 'For you sayang 💙';
+
+        // Hide hearts and clear interval
+        heartsContainer.style.display = 'none';
+        clearInterval(heartsInterval);
+      } else {
+        // Show letter
+        letter.classList.add('show-letter');
+        button.classList.add('move-up');
+        button.textContent = 'Me love you';
+
+        // Show hearts container
+        heartsContainer.style.display = 'block';
+
+        // Start generating hearts slowly
+        heartsInterval = setInterval(() => {
+          createHeart();
+        }, 1500);
+      }
+    });
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.style.left = Math.random() * 100 + 'vw'; // horizontal pos inside container
+      heart.style.fontSize = (14 + Math.random() * 12) + 'px'; // size 14-24 px
+      heart.style.animationDuration = (6 + Math.random() * 5) + 's'; // 6-10s animation
+
+      heart.textContent = '💙';
+
+      heartsContainer.appendChild(heart);
+
+      heart.addEventListener('animationend', () => {
+        heart.remove();
+      });
+    }
+    const heartsInterval = setInterval(createHeart, 1500);
+
+  
+  </script>
+</body>
+</html>
